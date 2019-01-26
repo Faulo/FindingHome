@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -42,6 +43,7 @@ public class AudioManager : MonoBehaviour
 
     // Public 
     public static AudioManager Instance { get { return _instance; } }
+    public AudioMixer Mixer { get { return _mixer; } }
     
     void Awake()
     {
@@ -265,5 +267,10 @@ public class AudioManager : MonoBehaviour
             // Make it available again
             activeSound.Playing = false;
         }
+    }
+
+    internal void SetVolume(float value)
+    {
+        //_mixer.GetFloat("Master", )
     }
 }
