@@ -45,7 +45,7 @@ public class CameraController : MonoBehaviour
             case Mode.follow:
                 Vector3 targetPosition = Offset + Target.position;
 
-                transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref Velocity, SmoothTime+.1f);
+                transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref Velocity, SmoothTime);
                 GetComponent<Camera>().orthographic = false;
                 break;
 
