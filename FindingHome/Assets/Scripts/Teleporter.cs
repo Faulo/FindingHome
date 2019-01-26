@@ -8,7 +8,6 @@ public class Teleporter : MonoBehaviour {
     private AudioCollection TeleportSound;
 
     private static ISet<CubeController> Subjects = new HashSet<CubeController>();
-    private static bool SwitchHappened = false;
     private static Coroutine SwitchRoutine;
 
     // Start is called before the first frame update
@@ -53,9 +52,14 @@ public class Teleporter : MonoBehaviour {
         FindObjectOfType<AudioManager>().PlayOneShotSound(TeleportSound, a.transform.position);
         FindObjectOfType<AudioManager>().PlayOneShotSound(TeleportSound, b.transform.position);
 
+        float duration = 0.5f;
+        yield return FindObjectOfType<Fade>().ToWhite(duration);
+
         var backup = a.transform.position;
         a.transform.position = b.transform.position;
         b.transform.position = backup;
+
+        yield return FindObjectOfType<Fade>().ToTransparent(duration);
 
         yield return new WaitForFixedUpdate();
 

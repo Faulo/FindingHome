@@ -19,4 +19,4 @@ MonoBehaviour:
   _audioClipBanks:
   - _name: Teleport
     _clips:
-    - {fileID: 8300000, guid: ee1f4ece194e27b4fbe947163230d71c, type: 3}
+    - {fileID: 8300000, guid: 0544c4a80565005429da10a36bffc3a4, type: 3}
