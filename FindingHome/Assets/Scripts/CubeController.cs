@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using Extensions;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CubeController : MonoBehaviour
@@ -18,6 +20,9 @@ public class CubeController : MonoBehaviour
 
     [SerializeField]
     private float DashForce = 100f;
+
+    [SerializeField]
+    private float InteractRadius = 5f;
 
 
 
@@ -67,18 +72,28 @@ public class CubeController : MonoBehaviour
         }
         Rigidbody.velocity = Vector3.SmoothDamp(Rigidbody.velocity, direction, ref Velocity, SmoothTime);
 
+        InteractUpdate();
+
         DashUpdate();
-        
+    }
+
+    private void InteractUpdate() {
+        if (Input.GetButtonDown("Interact" + Player)) {
+            Physics.OverlapSphere(transform.position, InteractRadius)
+                .SelectMany(collider => collider.gameObject.GetComponents<IInteractable>())
+                .ForAll(interactable => interactable.Interact(gameObject));
+        }
     }
 
     private void DashUpdate() {
-        if (Input.GetButtonDown("Interact" + Player)) {
-            Rigidbody.AddForce(transform.forward * DashForce);
-            DashTimer = DashDuration;
-        }
-
         if (IsDashing) {
             DashTimer -= Time.deltaTime;
+        } else {
+            var dashing = Input.GetAxis("Dash" + Player);
+            if (dashing > 0.5) {
+                Rigidbody.AddForce(transform.forward * DashForce);
+                DashTimer = DashDuration;
+            }
         }
     }
 }
