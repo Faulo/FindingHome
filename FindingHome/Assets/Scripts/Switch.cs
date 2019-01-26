@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Extensions;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +8,6 @@ public class Switch : MonoBehaviour
     bool isPressed = false;
     Vector3 originalPosition;
     float moveAmount = 0.08f;
-
-    public string activatableBy = "A";
 
     public GameObject mechanism;
 
@@ -32,23 +31,14 @@ public class Switch : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isPressed = true;
-        Debug.Log("Activate!");
-        if(other.GetComponent<CubeController>().IsFox && activatableBy == "Fox" || other.GetComponent<CubeController>().IsPingu && activatableBy == "Pingu")
-        //if (other.tag.Equals(activatableBy))
-        {
-            mechanism.GetComponent<IMechanism>().ActivateMechanism();
-        }
-        
+        mechanism.GetComponents<IMechanism>()
+            .ForAll(mechanism => mechanism.ActivateMechanism());
     }
 
     private void OnTriggerExit(Collider other)
     {
         isPressed = false;
-        Debug.Log("Deactivate!");
-        if (other.GetComponent<CubeController>().IsFox && activatableBy == "Fox" || other.GetComponent<CubeController>().IsPingu && activatableBy == "Pingu")
-        {
-            mechanism.GetComponent<IMechanism>().DeactivateMechanism();
-        }
-        
+        mechanism.GetComponents<IMechanism>()
+            .ForAll(mechanism => mechanism.DeactivateMechanism());
     }
 }
