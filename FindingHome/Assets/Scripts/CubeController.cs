@@ -22,7 +22,7 @@ public class CubeController : MonoBehaviour
     private float DashForce = 100f;
 
     [SerializeField]
-    private float InteractRadius = 5f;
+    private float InteractRadius = 1;
 
 
 

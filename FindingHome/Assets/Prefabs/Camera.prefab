@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6185578439522561983}
   - component: {fileID: 6185578439522561968}
   - component: {fileID: 6185578439522561969}
-  - component: {fileID: 6185578439522561970}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -90,14 +89,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   SmoothTime: 0
---- !u!81 &6185578439522561970
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185578439522561971}
-  m_Enabled: 1
+  blend: 0
+  SnapPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &6760430970458363687
 GameObject:
   m_ObjectHideFlags: 0
