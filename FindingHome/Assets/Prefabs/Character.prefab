@@ -106,7 +106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: A
-  MaxSpeed: 6
+  MaxSpeed: 10
+  SmoothTime: 0.25
+  TurnSpeed: 0.5
+  DashForce: 500
 --- !u!54 &7025347052411155638
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -117,7 +120,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
