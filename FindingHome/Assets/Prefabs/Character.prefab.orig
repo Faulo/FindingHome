@@ -84,7 +84,6 @@ GameObject:
   m_Layer: 0
   m_Name: Character
   m_TagString: Fox
-  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,10 +132,17 @@ MonoBehaviour:
   Player: A
   MaxSpeed: 5
   SmoothTime: 0.25
+<<<<<<< HEAD
   TurnSpeed: 0.5
   DashForce: 200
   DashDuration: 0.5
+=======
+  TurnSpeed: 0.1
+  DashForce: 5000
+  InteractRadius: 0.5
+  DashDuration: 0.25
   DashSound: {fileID: 11400000, guid: dc18dc5372afbe148a64b7b1ee63d513, type: 2}
+>>>>>>> character stuff, audio... stuff.
 --- !u!54 &7025347052411155638
 Rigidbody:
   m_ObjectHideFlags: 0

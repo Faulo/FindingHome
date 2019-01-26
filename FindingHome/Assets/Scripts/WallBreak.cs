@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WallBreak : MonoBehaviour
@@ -24,9 +25,12 @@ public class WallBreak : MonoBehaviour
         _audio = FindObjectOfType<AudioManager>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (other.tag == "Fox")
+        var shouldBreak = collider.GetComponents<CubeController>()
+            .Where(cube => cube.IsFox && cube.IsDashing)
+            .Any();
+        if (shouldBreak)
         {
             foreach (Rigidbody body in _wallBody)
             {

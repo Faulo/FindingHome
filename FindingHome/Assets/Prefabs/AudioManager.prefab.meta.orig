@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 86beaf49b076781468d1c5b27d015727
+=======
 guid: ac8926ca0770ed242aef4178c61e7e4d
+>>>>>>> character stuff, audio... stuff.
 PrefabImporter:
   externalObjects: {}
   userData: 
