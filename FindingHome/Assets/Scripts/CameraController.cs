@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform target;
+    [SerializeField]
+    private Transform Target;
 
-    public float smoothTime = 6f;
-    public float yDistanceToTarget = 10f;
+    [SerializeField]
+    private float SmoothTime = 0;
+
+    private Vector3 Velocity = Vector3.zero;
+
+    private Vector3 Offset;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Offset = transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 targetPosition = new Vector3(target.position.x, target.position.y + yDistanceToTarget, target.position.z);
-        this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, smoothTime * Time.deltaTime);
+        Vector3 targetPosition = Offset + Target.position;
+
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref Velocity, SmoothTime);
     }
 }
