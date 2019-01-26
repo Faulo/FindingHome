@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7327100366895747209}
   - component: {fileID: 7327100366895747206}
   - component: {fileID: 7327100366895747207}
-  - component: {fileID: 7327100366895747204}
   - component: {fileID: 3261356413911400401}
+  - component: {fileID: 4881754546423456817}
   m_Layer: 0
   m_Name: Teleporter
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7327100366895747202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.05, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.01, z: 0.5}
   m_Children:
   - {fileID: 2347481205707722064}
   m_Father: {fileID: 0}
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7327100366895747204
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7327100366895747202}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3261356413911400401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +93,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportSound: {fileID: 11400000, guid: 685da5d763f488e4d81724272eb84fff, type: 2}
+--- !u!136 &4881754546423456817
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7327100366895747202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9162386343552319950
 GameObject:
   m_ObjectHideFlags: 0
