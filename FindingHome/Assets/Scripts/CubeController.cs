@@ -6,6 +6,17 @@ using UnityEngine;
 
 public class CubeController : MonoBehaviour
 {
+    public static float PlayerDistance {
+        get {
+            var list = FindObjectsOfType<CubeController>();
+            if (list.Count() > 1) {
+                return Vector3.Distance(list[0].transform.position, list[1].transform.position);
+            } else {
+                return float.PositiveInfinity;
+            }
+        }
+    }
+
     [SerializeField]
     private string Player = "A";
 
