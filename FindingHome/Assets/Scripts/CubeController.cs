@@ -37,6 +37,10 @@ public class CubeController : MonoBehaviour
     [SerializeField]
     private float DashDuration = 1;
     private float DashTimer;
+
+    [SerializeField]
+    private AudioCollection DashSound;
+
     public bool IsDashing { get {
             return DashTimer > 0;
         }
@@ -93,6 +97,7 @@ public class CubeController : MonoBehaviour
             if (dashing > 0.5) {
                 Rigidbody.AddForce(transform.forward * DashForce);
                 DashTimer = DashDuration;
+                FindObjectOfType<AudioManager>().PlayOneShotSound(DashSound, transform.position);
             }
         }
     }

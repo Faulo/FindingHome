@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Torch : MonoBehaviour, IInteractable {
+    [SerializeField]
+    private AudioCollection LightSound;
+
     private bool IsLit = false;
+
     public void Interact(GameObject actor) {
         IsLit = !IsLit;
+        if (IsLit) {
+            FindObjectOfType<AudioManager>().PlayOneShotSound(LightSound, transform.position);
+        }
     }
 
     private GameObject Sparks {
