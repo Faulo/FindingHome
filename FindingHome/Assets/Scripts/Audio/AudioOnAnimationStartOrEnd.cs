@@ -14,13 +14,6 @@ public class AudioOnAnimationStartOrEnd : StateMachineBehaviour
     [Header("Audio Files")]
     [SerializeField] private AudioCollection _audioCollection;
     [SerializeField] private int _bank;
-    [Header("Sound Emitter")]
-    [SerializeField] private GameObject _soundEmitterPrefab;
-    [SerializeField] private float _decayRate = 3.5f;
-    [SerializeField] private float _soundRadius = 10f;
-    [Tooltip("Will be set automatically to true if 'Decrease Radius Multiplier' is not 0.")]
-    [SerializeField] private bool _keepRunning;
-    [SerializeField] [Range(0.0f, 1.0f)] private float _decreaseRadiusMultiplier;
     [Tooltip("Only Works for Sounds that Play on Animation Start.")]
     [SerializeField] private bool _killOnAnimationExit;
 

@@ -16,4 +16,7 @@ MonoBehaviour:
   _volume: 1
   _spatialBlend: 1
   _priority: 128
-  _audioClipBanks: []
+  _audioClipBanks:
+  - _name: Sliding Door
+    _clips:
+    - {fileID: 8300000, guid: eb700cd6c96fb3b4190ec3b0ebbd0d7d, type: 3}
