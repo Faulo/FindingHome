@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class WallBreak : MonoBehaviour
 {
+    [SerializeField] private AudioCollection _breakSound;
+
     private Rigidbody[] _wallBody;
+    private AudioManager _audio;
 
     private void Awake()
     {
@@ -16,6 +19,11 @@ public class WallBreak : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        _audio = FindObjectOfType<AudioManager>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Fox")
@@ -24,7 +32,17 @@ public class WallBreak : MonoBehaviour
             {
                 body.isKinematic = false;
             }
+
+            _audio.PlayOneShotSound(
+                            _breakSound.AudioGroup,
+                            _breakSound.audioClip,
+                            transform.position,
+                            _breakSound.Volume,
+                            _breakSound.SpatialBlend,
+                            _breakSound.Priority);
+
+
+            this.enabled = false;
         }
     }
-
 }
