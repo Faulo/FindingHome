@@ -498,6 +498,36 @@ PrefabInstance:
       propertyPath: SnapPoint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8256583399000638908, guid: d5fe2a6c0b7b3fa44821bfa30845112f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 155004750864458880, guid: d5fe2a6c0b7b3fa44821bfa30845112f,
+        type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155004750864458880, guid: d5fe2a6c0b7b3fa44821bfa30845112f,
+        type: 3}
+      propertyPath: orthographic size
+      value: 2.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 155004750864458881, guid: d5fe2a6c0b7b3fa44821bfa30845112f,
+        type: 3}
+      propertyPath: blend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155004750864458881, guid: d5fe2a6c0b7b3fa44821bfa30845112f,
+        type: 3}
+      propertyPath: SnapPoint.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 155004750864458881, guid: d5fe2a6c0b7b3fa44821bfa30845112f,
+        type: 3}
+      propertyPath: SnapPoint.x
+      value: -3.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5fe2a6c0b7b3fa44821bfa30845112f, type: 3}
 --- !u!1 &734590980
@@ -2459,6 +2489,36 @@ PrefabInstance:
         type: 3}
       propertyPath: SnapPoint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983339021205352306, guid: dcb4cf733b3d6644ebaf9f14900382c4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473108816930377294, guid: dcb4cf733b3d6644ebaf9f14900382c4,
+        type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473108816930377294, guid: dcb4cf733b3d6644ebaf9f14900382c4,
+        type: 3}
+      propertyPath: orthographic size
+      value: 2.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473108816930377295, guid: dcb4cf733b3d6644ebaf9f14900382c4,
+        type: 3}
+      propertyPath: blend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473108816930377295, guid: dcb4cf733b3d6644ebaf9f14900382c4,
+        type: 3}
+      propertyPath: SnapPoint.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473108816930377295, guid: dcb4cf733b3d6644ebaf9f14900382c4,
+        type: 3}
+      propertyPath: SnapPoint.x
+      value: 3.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcb4cf733b3d6644ebaf9f14900382c4, type: 3}

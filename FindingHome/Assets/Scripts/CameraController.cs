@@ -14,6 +14,9 @@ public class CameraController : MonoBehaviour
 
     private Vector3 Offset;
 
+    [SerializeField]
+    bool blend = false;
+
     enum Mode {follow, blend }
 
     Mode mode = Mode.follow;
@@ -29,13 +32,11 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IsInSnapZone())
+        if(IsInSnapZone() && blend)
         {
-            Debug.Log(gameObject.name + " is in SnapZone");
             mode = Mode.blend;
         } else
         {
-            Debug.Log(gameObject.name + " is not in SnapZone");
             mode = Mode.follow;
         }
 
@@ -49,14 +50,8 @@ public class CameraController : MonoBehaviour
                 break;
 
             case Mode.blend:
-                print("SnapPoint.x: " + SnapPoint.x);
-
                 transform.position = Vector3.SmoothDamp(transform.position, SnapPoint, ref Velocity, SmoothTime+1.1f);
                 GetComponent<Camera>().orthographic = true;
-
-                //transform.position = SnapPoint;
-
-                print("camPos.x: " + transform.position.x);
                 break;
             default:
                 break;
