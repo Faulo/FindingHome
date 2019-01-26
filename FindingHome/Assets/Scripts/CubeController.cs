@@ -72,17 +72,13 @@ public class CubeController : MonoBehaviour
         var direction = new Vector3(horizontal * MaxSpeed, 0, vertical * MaxSpeed);
         var targetPosition = transform.position + direction;
 
-        print(direction);
-        if (Input.GetButton("Horizontal" + Player) || Input.GetButton("Vertical" + Player)) _isMoving = true;
-        else _isMoving = false;
-
         if (direction != Vector3.zero) {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), TurnSpeed);
         }
 
-        if (_isMoving)
-            Rigidbody.velocity = Vector3.SmoothDamp(Rigidbody.velocity, direction, ref Velocity, SmoothTime * Time.deltaTime);//, MaxSpeed);
-        
+        Rigidbody.velocity = Vector3.SmoothDamp(Rigidbody.velocity, direction, ref Velocity, SmoothTime * Time.deltaTime);//, MaxSpeed);
+
+        _isMoving = Rigidbody.velocity.magnitude > 0.01f;
 
         InteractUpdate();
 

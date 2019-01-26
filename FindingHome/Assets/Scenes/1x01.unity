@@ -348,6 +348,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: A
       objectReference: {fileID: 0}
+    - target: {fileID: 2059694414866033024, guid: d5fe2a6c0b7b3fa44821bfa30845112f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5fe2a6c0b7b3fa44821bfa30845112f, type: 3}
 --- !u!1 &258155932
@@ -590,7 +595,7 @@ PrefabInstance:
     - target: {fileID: 1629032615349605828, guid: dcb4cf733b3d6644ebaf9f14900382c4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1629032615349605828, guid: dcb4cf733b3d6644ebaf9f14900382c4,
         type: 3}
