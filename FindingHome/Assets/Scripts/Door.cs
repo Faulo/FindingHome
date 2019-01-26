@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Door : MonoBehaviour, IMechanism
@@ -27,6 +28,11 @@ public class Door : MonoBehaviour, IMechanism
 
         transform.position = Vector3.Lerp(transform.position, targetPosition, 0.1f);
     }
+
+    public Color MechanismColor => GetComponentsInChildren<MeshRenderer>()
+        .Select(renderer => renderer.material)
+        .Select(material => material.color)
+        .First();
 
     public void ActivateMechanism()
     {

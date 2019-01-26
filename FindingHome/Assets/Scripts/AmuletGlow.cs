@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmuletGlow : MonoBehaviour
-{
+public class AmuletGlow : MonoBehaviour {
     [SerializeField]
-    private float MaxGlow = 1;
+    private AnimationCurve GlowCurve;
 
     private Light Light {
         get {
@@ -22,6 +21,6 @@ public class AmuletGlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Light.range = MaxGlow / CubeController.PlayerDistance;
+        Light.range = GlowCurve.Evaluate(CubeController.PlayerDistance);
     }
 }

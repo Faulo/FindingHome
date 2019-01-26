@@ -1,20 +1,30 @@
 ﻿using Extensions;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
     bool isPressed = false;
-    Vector3 originalPosition;
+    Vector3 OriginalPosition;
     float moveAmount = 0.08f;
 
-    public GameObject mechanism;
+    private IEnumerable<IMechanism> Mechanisms;
+
+    private Color MechanismColor {
+        get {
+            return GetComponent<MeshRenderer>().material.color;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        originalPosition = transform.position;
+        OriginalPosition = transform.position;
+        Mechanisms = FindObjectsOfType<GameObject>()
+            .SelectMany(gameObject => gameObject.GetComponents<IMechanism>())
+            .Where(mechanism => mechanism.MechanismColor == MechanismColor);
     }
 
     // Update is called once per frame
@@ -22,23 +32,21 @@ public class Switch : MonoBehaviour
     {
         Vector3 targetPosition;
         if (isPressed)
-            targetPosition = new Vector3(originalPosition.x, originalPosition.y - moveAmount, originalPosition.z);
+            targetPosition = new Vector3(OriginalPosition.x, OriginalPosition.y - moveAmount, OriginalPosition.z);
         else
-            targetPosition = originalPosition;
+            targetPosition = OriginalPosition;
         transform.position = Vector3.Lerp(transform.position, targetPosition, .1f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         isPressed = true;
-        mechanism.GetComponents<IMechanism>()
-            .ForAll(mechanism => mechanism.ActivateMechanism());
+        Mechanisms.ForAll(mechanism => mechanism.ActivateMechanism());
     }
 
     private void OnTriggerExit(Collider other)
     {
         isPressed = false;
-        mechanism.GetComponents<IMechanism>()
-            .ForAll(mechanism => mechanism.DeactivateMechanism());
+        Mechanisms.ForAll(mechanism => mechanism.DeactivateMechanism());
     }
 }

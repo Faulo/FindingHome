@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IMechanism 
 {
+    Color MechanismColor { get; }
     void ActivateMechanism();
     void DeactivateMechanism();
 }
