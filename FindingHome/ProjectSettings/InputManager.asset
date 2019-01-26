@@ -9,8 +9,8 @@ InputManager:
     m_Name: HorizontalA
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: left
-    positiveButton: right
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -25,8 +25,8 @@ InputManager:
     m_Name: VerticalA
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: down
-    positiveButton: up
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -42,39 +42,39 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left ctrl
+    positiveButton: r
     altNegativeButton: 
     altPositiveButton: joystick button 4
-    gravity: 1000
+    gravity: 0
     dead: 0.001
-    sensitivity: 1000
+    sensitivity: 1
     snap: 0
     invert: 0
     type: 0
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: InteractA
+    m_Name: DashA
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left alt
+    positiveButton: 
     altNegativeButton: 
-    altPositiveButton: joystick button 6
-    gravity: 1000
+    altPositiveButton: 
+    gravity: 0
     dead: 0.001
-    sensitivity: 1000
+    sensitivity: 1
     snap: 0
     invert: 0
-    type: 0
-    axis: 0
+    type: 2
+    axis: 8
     joyNum: 0
   - serializedVersion: 3
     m_Name: HorizontalB
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: a
-    positiveButton: d
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -89,8 +89,8 @@ InputManager:
     m_Name: VerticalB
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: s
-    positiveButton: w
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: joystick button 6
     gravity: 0
@@ -106,7 +106,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: right ctrl
+    positiveButton: '[7]'
     altNegativeButton: 
     altPositiveButton: joystick button 5
     gravity: 1000
@@ -118,20 +118,20 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: InteractB
+    m_Name: DashB
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: right alt
+    positiveButton: 
     altNegativeButton: 
-    altPositiveButton: joystick button 7
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 0
-    axis: 0
+    type: 2
+    axis: 9
     joyNum: 0
   - serializedVersion: 3
     m_Name: HorizontalA
@@ -140,11 +140,11 @@ InputManager:
     negativeButton: a
     positiveButton: d
     altNegativeButton: 
-    altPositiveButton: joystick button 7
-    gravity: 1000
+    altPositiveButton: 
+    gravity: 0
     dead: 0.001
-    sensitivity: 1000
-    snap: 0
+    sensitivity: 1
+    snap: 1
     invert: 0
     type: 0
     axis: 0
@@ -156,11 +156,43 @@ InputManager:
     negativeButton: s
     positiveButton: w
     altNegativeButton: 
-    altPositiveButton: joystick button 7
-    gravity: 1000
+    altPositiveButton: 
+    gravity: 0
     dead: 0.001
-    sensitivity: 1000
-    snap: 0
+    sensitivity: 1
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: HorizontalB
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.001
+    sensitivity: 1
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: VerticalB
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.001
+    sensitivity: 1
+    snap: 1
     invert: 0
     type: 0
     axis: 0

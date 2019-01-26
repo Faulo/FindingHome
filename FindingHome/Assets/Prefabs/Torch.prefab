@@ -4857,6 +4857,7 @@ GameObject:
   - component: {fileID: 1494258593100673881}
   - component: {fileID: 6214824213360007170}
   - component: {fileID: 5695528406785522732}
+  - component: {fileID: 7107322027175692525}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -4937,3 +4938,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1673fbc7605cf42951a111bec182fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7107322027175692525
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6630726190443791998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
