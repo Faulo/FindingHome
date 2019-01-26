@@ -106,11 +106,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: A
-  MaxSpeed: 10
+  MaxSpeed: 5
   SmoothTime: 0.25
   TurnSpeed: 0.5
-  DashForce: 500
-  DashDuration: 1
+  DashForce: 200
+  DashDuration: 0.5
 --- !u!54 &7025347052411155638
 Rigidbody:
   m_ObjectHideFlags: 0

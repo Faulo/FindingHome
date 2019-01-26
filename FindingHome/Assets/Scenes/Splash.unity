@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581920c8877a1224e8ab215a363c8539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mixer: {fileID: 0}
+  _mixer: {fileID: 24100000, guid: f6541d466f2a63741a619ca35cbfe2ce, type: 2}
   _maxSounds: 10
 --- !u!4 &1247232295
 Transform:
