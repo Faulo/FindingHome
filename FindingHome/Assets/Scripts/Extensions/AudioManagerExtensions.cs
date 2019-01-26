@@ -5,6 +5,9 @@ using UnityEngine;
 public static class AudioManagerExtensions 
 {
     public static void PlayOneShotSound(this AudioManager manager, AudioCollection collection, Vector3 position) {
+        if (collection == null) {
+            return;
+        }
         manager.PlayOneShotSound(
             collection.AudioGroup,
             collection.audioClip,
