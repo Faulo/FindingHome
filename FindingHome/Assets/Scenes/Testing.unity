@@ -612,7 +612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 583065823}
   m_Layer: 0
-  m_Name: B
+  m_Name: Pingu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,7 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1008875758}
   m_Layer: 0
-  m_Name: A
+  m_Name: Fox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

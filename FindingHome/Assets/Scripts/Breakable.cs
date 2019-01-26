@@ -20,7 +20,7 @@ public class Breakable : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision) {
         var shouldBreak = collision.collider.GetComponents<CubeController>()
-            .Where(cube => cube.IsDashing)
+            .Where(cube => cube.IsFox && cube.IsDashing)
             .Any();
 
         if (shouldBreak) {

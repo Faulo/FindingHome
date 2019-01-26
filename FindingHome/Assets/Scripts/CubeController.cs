@@ -37,6 +37,18 @@ public class CubeController : MonoBehaviour
         }
     }
 
+    public bool IsFox {
+        get {
+            return Player == "A";
+        }
+    }
+
+    public bool IsPingu {
+        get {
+            return Player == "B";
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
