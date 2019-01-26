@@ -25,7 +25,7 @@ public class WallBreak : MonoBehaviour
         _audio = FindObjectOfType<AudioManager>();
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerStay(Collider collider)
     {
         var shouldBreak = collider.GetComponents<CubeController>()
             .Where(cube => cube.IsFox && cube.IsDashing)
@@ -36,9 +36,7 @@ public class WallBreak : MonoBehaviour
             {
                 body.isKinematic = false;
             }
-            if (_breakSound != null) {
-
-            
+            if (_breakSound)
                 _audio.PlayOneShotSound(
                             _breakSound.AudioGroup,
                             _breakSound.audioClip,
@@ -46,7 +44,6 @@ public class WallBreak : MonoBehaviour
                             _breakSound.Volume,
                             _breakSound.SpatialBlend,
                             _breakSound.Priority);
-            }
 
             this.enabled = false;
         }

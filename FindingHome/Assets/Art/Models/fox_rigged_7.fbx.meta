@@ -1,20 +1,28 @@
 fileFormatVersion: 2
-guid: 126e28521b8cd37429f9f2570832663b
+guid: dc5d2d75b64519048a1b403b7413cf0b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: joint2
+    100004: joint3
+    100006: joint4
+    100008: joint5
+    100010: joint6
+    100012: pCube1
     400000: //RootNode
+    400002: joint2
+    400004: joint3
+    400006: joint4
+    400008: joint5
+    400010: joint6
+    400012: pCube1
     2100000: lambert2
-    2300000: //RootNode
-    3300000: //RootNode
     4300000: pCube1
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert2
-    second: {fileID: 2100000, guid: 69d627c3ca2c3964ebff9b4ed3b36384, type: 2}
+    9500000: //RootNode
+    13700000: pCube1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -66,8 +74,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -94,7 +102,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

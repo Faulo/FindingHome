@@ -25,7 +25,9 @@ public class CubeController : MonoBehaviour
     private float InteractRadius = 1;
 
 
+    private bool _isMoving = false;
 
+    private Animator _animator;
     private Vector3 Velocity = Vector3.zero;
 
     private Rigidbody Rigidbody {
@@ -58,10 +60,9 @@ public class CubeController : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        _animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -71,14 +72,26 @@ public class CubeController : MonoBehaviour
         var direction = new Vector3(horizontal * MaxSpeed, 0, vertical * MaxSpeed);
         var targetPosition = transform.position + direction;
 
+        print(direction);
+        if (Input.GetButton("Horizontal" + Player) || Input.GetButton("Vertical" + Player)) _isMoving = true;
+        else _isMoving = false;
+
         if (direction != Vector3.zero) {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), TurnSpeed);
         }
-        Rigidbody.velocity = Vector3.SmoothDamp(Rigidbody.velocity, direction, ref Velocity, SmoothTime);
+
+        if (_isMoving)
+            Rigidbody.velocity = Vector3.SmoothDamp(Rigidbody.velocity, direction, ref Velocity, SmoothTime * Time.deltaTime);//, MaxSpeed);
+        
 
         InteractUpdate();
 
         DashUpdate();
+    }
+
+    private void FixedUpdate()
+    {
+        _animator.SetBool("isMoving", _isMoving);
     }
 
     private void InteractUpdate() {
