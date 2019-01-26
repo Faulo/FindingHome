@@ -406,17 +406,17 @@ PrefabInstance:
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.66
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
@@ -473,6 +473,11 @@ PrefabInstance:
       propertyPath: yDistanceToTarget
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561969, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 1880973549}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c725e3b55b453a64193e0bcf3a742584, type: 3}
 --- !u!43 &1296406298
@@ -650,17 +655,17 @@ PrefabInstance:
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.66
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
@@ -712,6 +717,11 @@ PrefabInstance:
       propertyPath: yDistanceToTarget
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561969, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 537702510}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c725e3b55b453a64193e0bcf3a742584, type: 3}
 --- !u!1 &1584902268
