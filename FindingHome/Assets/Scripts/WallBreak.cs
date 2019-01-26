@@ -27,10 +27,10 @@ public class WallBreak : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
-        var shouldBreak = collider.GetComponents<CubeController>()
+        var fox = collider.GetComponents<CubeController>()
             .Where(cube => cube.IsFox && cube.IsDashing)
-            .Any();
-        if (shouldBreak)
+            .FirstOrDefault();
+        if (fox != null)
         {
             foreach (Rigidbody body in _wallBody)
             {

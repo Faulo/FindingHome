@@ -22,12 +22,20 @@ public class CubeController : MonoBehaviour
     private float DashForce = 100f;
 
     [SerializeField]
+    private float DashDuration = 1;
+
+    [SerializeField]
+    private AudioCollection DashSound;
+
+    private float DashTimer;
+
+    private bool DashReady = true;
+
+    [SerializeField]
     private float InteractRadius = 1;
 
+    private Animator Animator;
 
-    private bool _isMoving = false;
-
-    private Animator _animator;
     private Vector3 Velocity = Vector3.zero;
 
     private Rigidbody Rigidbody {
@@ -35,13 +43,6 @@ public class CubeController : MonoBehaviour
             return GetComponent<Rigidbody>();
         }
     }
-
-    [SerializeField]
-    private float DashDuration = 1;
-    private float DashTimer;
-
-    [SerializeField]
-    private AudioCollection DashSound;
 
     public bool IsDashing { get {
             return DashTimer > 0;
@@ -62,7 +63,7 @@ public class CubeController : MonoBehaviour
 
     private void Start()
     {
-        _animator = GetComponentInChildren<Animator>();
+        Animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -76,18 +77,13 @@ public class CubeController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), TurnSpeed);
         }
 
-        Rigidbody.velocity = Vector3.SmoothDamp(Rigidbody.velocity, direction, ref Velocity, SmoothTime * Time.deltaTime);//, MaxSpeed);
+        Rigidbody.velocity = Vector3.SmoothDamp(Rigidbody.velocity, direction, ref Velocity, SmoothTime);//, MaxSpeed);
 
-        _isMoving = Rigidbody.velocity.magnitude > 0.01f;
+        Animator.SetBool("isMoving", Rigidbody.velocity.magnitude > 0.01f);
 
         InteractUpdate();
 
         DashUpdate();
-    }
-
-    private void FixedUpdate()
-    {
-        _animator.SetBool("isMoving", _isMoving);
     }
 
     private void InteractUpdate() {
@@ -99,15 +95,24 @@ public class CubeController : MonoBehaviour
     }
 
     private void DashUpdate() {
+        var dashing = Input.GetAxis("Dash" + Player);
+        if (dashing < 0.5) {
+            DashReady = true;
+        }
+
         if (IsDashing) {
             DashTimer -= Time.deltaTime;
         } else {
-            var dashing = Input.GetAxis("Dash" + Player);
-            if (dashing > 0.5) {
-                Rigidbody.AddForce(transform.forward * DashForce);
-                DashTimer = DashDuration;
-                FindObjectOfType<AudioManager>().PlayOneShotSound(DashSound, transform.position);
+            if (DashReady && dashing > 0.5) {
+                Dash();
             }
         }
+    }
+
+    private void Dash() {
+        DashReady = false;
+        Rigidbody.AddForce(transform.forward * DashForce);
+        DashTimer = DashDuration;
+        FindObjectOfType<AudioManager>().PlayOneShotSound(DashSound, transform.position);
     }
 }
