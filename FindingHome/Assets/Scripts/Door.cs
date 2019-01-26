@@ -8,7 +8,7 @@ public class Door : MonoBehaviour, IMechanism
 
     Vector3 originalPosition;
 
-    float moveAmount = 2f;
+    public float moveAmount = 2f;
 
     // Start is called before the first frame update
     void Start()
