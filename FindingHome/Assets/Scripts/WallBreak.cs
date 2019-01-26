@@ -36,15 +36,17 @@ public class WallBreak : MonoBehaviour
             {
                 body.isKinematic = false;
             }
+            if (_breakSound != null) {
 
-            _audio.PlayOneShotSound(
+            
+                _audio.PlayOneShotSound(
                             _breakSound.AudioGroup,
                             _breakSound.audioClip,
                             transform.position,
                             _breakSound.Volume,
                             _breakSound.SpatialBlend,
                             _breakSound.Priority);
-
+            }
 
             this.enabled = false;
         }

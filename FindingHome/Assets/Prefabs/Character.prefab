@@ -130,12 +130,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: A
-  MaxSpeed: 5
+  MaxSpeed: 6
   SmoothTime: 0.25
-  TurnSpeed: 0.5
-  DashForce: 200
-  InteractRadius: 5
-  DashDuration: 0.5
+  TurnSpeed: 0.1
+  DashForce: 3000
+  InteractRadius: 0.5
+  DashDuration: 0.25
   DashSound: {fileID: 11400000, guid: dc18dc5372afbe148a64b7b1ee63d513, type: 2}
 --- !u!54 &7025347052411155638
 Rigidbody:
