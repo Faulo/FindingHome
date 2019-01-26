@@ -58,7 +58,7 @@ public class CubeController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         var horizontal = Input.GetAxis("Horizontal" + Player);
-        var vertical = -1 * Input.GetAxis("Vertical" + Player);
+        var vertical = Input.GetAxis("Vertical" + Player);
         var direction = new Vector3(horizontal * MaxSpeed, 0, vertical * MaxSpeed);
         var targetPosition = transform.position + direction;
 
