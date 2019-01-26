@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2091930847}
   - component: {fileID: 2091930848}
+  - component: {fileID: 5556272592132353944}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -69,6 +70,19 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &5556272592132353944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091930846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdaa0bfa6f2dd7e44a62bd7441c422e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxGlow: 5
 --- !u!1 &455877046792214958
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +249,7 @@ GameObject:
   - component: {fileID: 5632813254354004538}
   - component: {fileID: 5632813254354004537}
   m_Layer: 0
-  m_Name: Amulett
+  m_Name: Amulet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 5632813254354004536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -2.25}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 3123359272167078348}
   - {fileID: 8337564051959976162}

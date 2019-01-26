@@ -1,33 +1,31 @@
 fileFormatVersion: 2
-guid: dc5d2d75b64519048a1b403b7413cf0b
+guid: 999ed297162d61147afe6f6bcbf1e6ff
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
+    100000: joint1
     100002: joint2
-    100004: joint3
-    100006: joint4
-    100008: joint5
-    100010: joint6
-    100012: pCube1
-    400000: //RootNode
+    100004: pCube1
+    100006: //RootNode
+    400000: joint1
     400002: joint2
-    400004: joint3
-    400006: joint4
-    400008: joint5
-    400010: joint6
-    400012: pCube1
-    2100000: lambert2
+    400004: pCube1
+    400006: //RootNode
+    2100000: lambert3
     4300000: pCube1
     9500000: //RootNode
     13700000: pCube1
-    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert2
-    second: {fileID: 2100000, guid: 1f87082d231744541aa5d12451dae81d, type: 2}
+      name: lambert3
+    second: {fileID: 2100000, guid: 3725ea5eb5a812c4ebeeda5e4f8202fe, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pingu_uv1
+    second: {fileID: 2800000, guid: ef635ccbe30817044acde6e11f77a6e0, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

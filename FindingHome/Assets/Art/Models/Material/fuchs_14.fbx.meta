@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dc5d2d75b64519048a1b403b7413cf0b
+guid: 3799568250dbb4643821e42dd9399148
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -17,7 +17,7 @@ ModelImporter:
     400008: joint5
     400010: joint6
     400012: pCube1
-    2100000: lambert2
+    2100000: lambert3
     4300000: pCube1
     9500000: //RootNode
     13700000: pCube1
@@ -26,8 +26,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert2
-    second: {fileID: 2100000, guid: 1f87082d231744541aa5d12451dae81d, type: 2}
+      name: lambert3
+    second: {fileID: 2100000, guid: 582424836289dea4fbdde6fc26b8d710, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fox_uv2
+    second: {fileID: 2800000, guid: 945e8df226efa9648b7ad281b3589604, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
