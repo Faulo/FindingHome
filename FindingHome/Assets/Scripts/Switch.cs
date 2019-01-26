@@ -33,7 +33,8 @@ public class Switch : MonoBehaviour
     {
         isPressed = true;
         Debug.Log("Activate!");
-        if (other.tag.Equals(activatableBy))
+        if(other.GetComponent<CubeController>().IsFox && activatableBy == "Fox" || other.GetComponent<CubeController>().IsPingu && activatableBy == "Pingu")
+        //if (other.tag.Equals(activatableBy))
         {
             mechanism.GetComponent<IMechanism>().ActivateMechanism();
         }
@@ -44,7 +45,7 @@ public class Switch : MonoBehaviour
     {
         isPressed = false;
         Debug.Log("Deactivate!");
-        if (other.tag.Equals(activatableBy))
+        if (other.GetComponent<CubeController>().IsFox && activatableBy == "Fox" || other.GetComponent<CubeController>().IsPingu && activatableBy == "Pingu")
         {
             mechanism.GetComponent<IMechanism>().DeactivateMechanism();
         }

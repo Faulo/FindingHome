@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 1844995601}
   - component: {fileID: 1844995600}
   - component: {fileID: 1844995604}
+  - component: {fileID: 1844995605}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -400,6 +401,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1844995605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844995599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7867f85c0717f64e83f0b1ff2dc857b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: B
+  MaxSpeed: 0.1
+  SmoothTime: 0.25
+  TurnSpeed: 1
+  DashForce: 100
+  InteractRadius: 5
+  DashDuration: 1
 --- !u!1 &2146478533
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,5 +630,10 @@ PrefabInstance:
       propertyPath: mechanism
       value: 
       objectReference: {fileID: 721463231}
+    - target: {fileID: 7327100366895747208, guid: fc9653f2a765de849aa186a9b02e0e68,
+        type: 3}
+      propertyPath: activatableBy
+      value: Pingu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9653f2a765de849aa186a9b02e0e68, type: 3}
