@@ -10,23 +10,34 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private float SmoothTime = 1f;
 
+    Transform Room;
+
     private Vector3 Velocity = Vector3.zero;
 
     private Vector3 Offset;
 
     [SerializeField]
-    bool blend = false;
+    bool blend = true;
+    bool isFoxCam;
 
     enum Mode {follow, blend }
 
     Mode mode = Mode.follow;
-
-    public Vector3 SnapPoint;
+    [SerializeField]
+    Vector3 SnapPoint;
 
     // Start is called before the first frame update
     void Start()
     {
+        Room = GameObject.Find("RoomPosition").transform;
+
+        if (transform.parent.name == "Player.Fox") isFoxCam = true;
+        else isFoxCam = false;
+
         Offset = transform.localPosition;
+
+        SnapPoint = new Vector3(Room.position.x + 3, 5, 0);
+        if (isFoxCam) SnapPoint.x *= -1;
     }
 
     // Update is called once per frame
@@ -60,8 +71,8 @@ public class CameraController : MonoBehaviour
 
     bool IsInSnapZone()
     {
-        Vector2 lowerLeftBound = new Vector2(-3.5f, -3.5f);
-        Vector2 upperRightBound = new Vector2(3.5f, 3.5f);
+        Vector2 lowerLeftBound = new Vector2(Room.position.x-3.5f, Room.position.z - 3.5f);
+        Vector2 upperRightBound = new Vector2(Room.position.x + 3.5f, Room.position.z + 3.5f);
 
         Vector2 camPosition = new Vector2(Target.position.x, Target.position.z);
 
