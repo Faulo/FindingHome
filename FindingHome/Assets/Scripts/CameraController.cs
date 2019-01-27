@@ -30,6 +30,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         Room = GameObject.Find("RoomPosition").transform;
+        if (Room == null) blend = false;
 
         if (transform.parent.name == "Player.Fox") isFoxCam = true;
         else isFoxCam = false;
