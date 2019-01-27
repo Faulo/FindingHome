@@ -13,7 +13,10 @@ public class SceneTransitionHack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown("L"))
+        {
+            FindObjectOfType<LevelManager>().LoadNextLevel();
+        }
     }
 
     IEnumerator SceneTransition()
