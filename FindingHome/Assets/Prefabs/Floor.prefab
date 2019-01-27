@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 722744634760844650}
   - component: {fileID: 722744634760844651}
   - component: {fileID: 722744634760844648}
-  - component: {fileID: 6448354206364929020}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Floor
@@ -93,11 +92,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!81 &6448354206364929020
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722744634760844649}
-  m_Enabled: 1
