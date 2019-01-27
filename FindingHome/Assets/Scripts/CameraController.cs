@@ -10,6 +10,9 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private float SmoothTime = 1f;
 
+    [SerializeField]
+    Transform Room;
+
     private Vector3 Velocity = Vector3.zero;
 
     private Vector3 Offset;
@@ -60,8 +63,8 @@ public class CameraController : MonoBehaviour
 
     bool IsInSnapZone()
     {
-        Vector2 lowerLeftBound = new Vector2(-3.5f, -3.5f);
-        Vector2 upperRightBound = new Vector2(3.5f, 3.5f);
+        Vector2 lowerLeftBound = new Vector2(Room.position.x-3.5f, Room.position.z - 3.5f);
+        Vector2 upperRightBound = new Vector2(Room.position.x + 3.5f, Room.position.z + 3.5f);
 
         Vector2 camPosition = new Vector2(Target.position.x, Target.position.z);
 
