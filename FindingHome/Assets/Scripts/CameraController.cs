@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Room = GameObject.Find("Room").transform;
+        Room = GameObject.Find("RoomPosition").transform;
 
         if (transform.parent.name == "Player.Fox") isFoxCam = true;
         else isFoxCam = false;
