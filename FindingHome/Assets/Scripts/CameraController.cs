@@ -10,7 +10,6 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private float SmoothTime = 1f;
 
-    [SerializeField]
     Transform Room;
 
     private Vector3 Velocity = Vector3.zero;
@@ -18,9 +17,8 @@ public class CameraController : MonoBehaviour
     private Vector3 Offset;
 
     [SerializeField]
-    bool blend = false;
-    [SerializeField]
-    bool isFoxCam = true;
+    bool blend = true;
+    bool isFoxCam;
 
     enum Mode {follow, blend }
 
@@ -31,7 +29,13 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Room = GameObject.Find("Room").transform;
+
+        if (transform.parent.name == "Player.Fox") isFoxCam = true;
+        else isFoxCam = false;
+
         Offset = transform.localPosition;
+
         SnapPoint = new Vector3(Room.position.x + 3, 5, 0);
         if (isFoxCam) SnapPoint.x *= -1;
     }
