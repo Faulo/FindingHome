@@ -18,6 +18,21 @@ EditorBuildSettings:
     path: Assets/Scenes/0x02 Options.unity
     guid: 22c074f8dbaebe045933d80cc8a8480c
   - enabled: 1
-    path: Assets/Scenes/Testing.Switches.unity
-    guid: 9d1634383de29ab46abef5b9d7ca450b
+    path: Assets/Scenes/1x01.unity
+    guid: 9254a612a509bcc448e7ba0a2af2511c
+  - enabled: 1
+    path: Assets/Scenes/1x02.unity
+    guid: 854baf707fc3ddc41ad6ad983450ad02
+  - enabled: 1
+    path: Assets/Scenes/1x03.unity
+    guid: c7da3f9a722889f48828f17fc83ab3b8
+  - enabled: 1
+    path: Assets/Scenes/1x04.unity
+    guid: cd1383baa960279469af3c30bf2db2f3
+  - enabled: 1
+    path: Assets/Scenes/1x05.unity
+    guid: a7884bbcb151c764491da5000e7747fa
+  - enabled: 1
+    path: Assets/Scenes/1x06.unity
+    guid: fe40aba099adc034c99e594953c3def7
   m_configObjects: {}
