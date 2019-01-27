@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class CubeController : MonoBehaviour
-{
+public class CubeController : MonoBehaviour, IActor {
     public static float PlayerDistance {
         get {
             var list = FindObjectsOfType<CubeController>();
