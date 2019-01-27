@@ -63,3 +63,22 @@ sysinfo.txt
 *.apk
 *.unitypackage
 FindingHome/Assets/ProCore/ProBuilderData.meta
+/FindingHome/Assets/ProCore/ProBuilder/API Examples/Icosphere FFT/Scripts.meta
+/FindingHome/Assets/ProCore/ProBuilder/API Examples/Misc.meta
+/FindingHome/Assets/ProCore/ProBuilder/API Examples/Procedural Mesh.meta
+/FindingHome/Assets/ProCore/ProBuilder/API Examples/Runtime Editing.meta
+/FindingHome/Assets/ProCore/ProBuilder/API Examples/Vertex Colors.meta
+/FindingHome/Assets/ProCore/ProBuilder/About/Editor.meta
+/FindingHome/Assets/ProCore/ProBuilder/About/Font.meta
+/FindingHome/Assets/ProCore/ProBuilder/Editor/Addons.meta
+/FindingHome/Assets/ProCore/ProBuilder/Editor/MenuItems/Actions.meta
+/FindingHome/Assets/ProCore/ProBuilder/Editor/MenuItems/Geometry.meta
+/FindingHome/Assets/ProCore/ProBuilder/Editor/MenuItems/Repair.meta
+/FindingHome/Assets/ProCore/ProBuilder/Editor/MenuItems/Selection.meta
+/FindingHome/Assets/ProCore/ProBuilder/Editor/MenuItems/Tools.meta
+/FindingHome/Assets/ProCore/ProBuilder/Editor/MenuItems/Window.meta
+/FindingHome/Assets/ProCore/ProBuilder/API Examples/Icosphere FFT.meta
+/FindingHome/Assets/ProCore/ProBuilder/About.meta
+/FindingHome/Assets/ProCore/ProBuilder/Editor/MenuItems.meta
+/FindingHome/Assets/ProCore/ProBuilder/API Examples.meta
+/FindingHome/Assets/ProCore/ProBuilder/Editor.meta

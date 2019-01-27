@@ -57,8 +57,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 3.385
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -88,5 +88,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   SmoothTime: 0
-  blend: 0
+  blend: 1
   SnapPoint: {x: 0, y: 0, z: 0}
