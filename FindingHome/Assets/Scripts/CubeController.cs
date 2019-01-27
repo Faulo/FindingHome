@@ -125,8 +125,8 @@ public class CubeController : MonoBehaviour, IActor {
             Physics.OverlapSphere(transform.position, InteractRadius)
                 .Select(collider => collider.gameObject)
                 .OrderBy(obj => Vector3.Distance(transform.position, obj.transform.position))
-                .SelectMany(obj => obj.GetComponents<IInteractable>())
                 .Take(1)
+                .SelectMany(obj => obj.GetComponents<IInteractable>())
                 .ForAll(interactable => interactable.Interact(gameObject));
         }
     }
