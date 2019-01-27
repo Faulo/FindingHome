@@ -90,12 +90,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7867f85c0717f64e83f0b1ff2dc857b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: B
-  MaxSpeed: 1
+  Player: 1
+  MaxSpeed: 1.5
   SmoothTime: 0.01
   TurnSpeed: 0.1
-  DashForce: 3000
-  DashDuration: 0.25
+  DashForce: 5
+  DashDuration: 0.1
   DashSound: {fileID: 11400000, guid: dc18dc5372afbe148a64b7b1ee63d513, type: 2}
   InteractRadius: 0.5
 --- !u!54 &7850830574991868668
@@ -154,11 +154,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8550979430780081290}
     m_Modifications:
-    - target: {fileID: 6185578439522561971, guid: c725e3b55b453a64193e0bcf3a742584,
-        type: 3}
-      propertyPath: m_Name
-      value: Camera
-      objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -214,16 +209,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6185578439522561968, guid: c725e3b55b453a64193e0bcf3a742584,
+    - target: {fileID: 6185578439522561971, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0.5
+      propertyPath: m_Name
+      value: Camera
       objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561969, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
       propertyPath: Target
       value: 
       objectReference: {fileID: 7714072321703137224}
+    - target: {fileID: 6185578439522561968, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c725e3b55b453a64193e0bcf3a742584, type: 3}
 --- !u!4 &6174319956912292699 stripped
@@ -308,10 +308,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7714072321703137224}
     m_Modifications:
-    - target: {fileID: 100006, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
-      propertyPath: m_Name
-      value: pinguin8_textured
-      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -367,6 +363,10 @@ PrefabInstance:
     - target: {fileID: 400006, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
       propertyPath: m_LocalScale.z
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
+      propertyPath: m_Name
+      value: pinguin8_textured
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
       propertyPath: m_Controller
