@@ -19,17 +19,21 @@ public class CameraController : MonoBehaviour
 
     [SerializeField]
     bool blend = false;
+    [SerializeField]
+    bool isFoxCam = true;
 
     enum Mode {follow, blend }
 
     Mode mode = Mode.follow;
-
-    public Vector3 SnapPoint;
+    [SerializeField]
+    Vector3 SnapPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         Offset = transform.localPosition;
+        SnapPoint = new Vector3(Room.position.x + 3, 5, 0);
+        if (isFoxCam) SnapPoint.x *= -1;
     }
 
     // Update is called once per frame
