@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/0x02 Options.unity
     guid: 22c074f8dbaebe045933d80cc8a8480c
   - enabled: 1
+    path: Assets/Scenes/1x00.unity
+    guid: 6be6600b34db0d04fab3cc26973fab74
+  - enabled: 1
     path: Assets/Scenes/1x01.unity
     guid: 9254a612a509bcc448e7ba0a2af2511c
   - enabled: 1
