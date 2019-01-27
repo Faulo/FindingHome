@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Dash
   m_EditorClassIdentifier: 
   _audioGroup: Environment
-  _volume: 1
+  _volume: 0.5
   _spatialBlend: 0
   _priority: 128
   _audioClipBanks:
   - _name: Dash
     _clips:
-    - {fileID: 8300000, guid: cd5f8e7f12bbf5b4486e9fdc6f827e1f, type: 3}
+    - {fileID: 8300000, guid: cc7ae96651b36db48a3a25c26e74141b, type: 3}
+    - {fileID: 8300000, guid: e9ab19a117446e441bc816340417bea2, type: 3}
+    - {fileID: 8300000, guid: 4b3c66d6382f2f04e9f1e15340c1f3f4, type: 3}

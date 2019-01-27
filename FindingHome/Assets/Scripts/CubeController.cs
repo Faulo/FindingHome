@@ -18,22 +18,22 @@ public class CubeController : MonoBehaviour
     }
 
     [SerializeField]
-    private string Player = "A";
+    private PlayerType Player;
 
     [SerializeField]
-    private float MaxSpeed = 0.1f;
+    private float MaxSpeed = 2f;
 
     [SerializeField]
-    private float SmoothTime = 0.25f;
+    private float SmoothTime = 0.01f;
 
     [SerializeField]
-    private float TurnSpeed = 1f;
+    private float TurnSpeed = 0.1f;
 
     [SerializeField]
-    private float DashForce = 100f;
+    private float DashForce = 1000f;
 
     [SerializeField]
-    private float DashDuration = 1;
+    private float DashDuration = 0.25f;
 
     [SerializeField]
     private AudioCollection DashSound;
@@ -55,20 +55,33 @@ public class CubeController : MonoBehaviour
         }
     }
 
-    public bool IsDashing { get {
+    public bool IsDashing {
+        get {
             return DashTimer > 0;
         }
     }
 
     public bool IsFox {
         get {
-            return Player == "A";
+            return Player == PlayerType.Fox;
         }
     }
 
     public bool IsPingu {
         get {
-            return Player == "B";
+            return Player == PlayerType.Penguin;
+        }
+    }
+
+    private string PlayerKey {
+        get {
+            switch (Player) {
+                case PlayerType.Fox:
+                    return "A";
+                case PlayerType.Penguin:
+                    return "B";
+            }
+            throw new System.Exception("Unknown PlayerType" + Player);
         }
     }
 
@@ -79,8 +92,12 @@ public class CubeController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        var horizontal = Input.GetAxis("Horizontal" + Player);
-        var vertical = Input.GetAxis("Vertical" + Player);
+        InteractUpdate();
+
+        DashUpdate();
+
+        var horizontal = Input.GetAxis("Horizontal" + PlayerKey);
+        var vertical = Input.GetAxis("Vertical" + PlayerKey);
         var direction = new Vector3(horizontal * MaxSpeed, 0, vertical * MaxSpeed);
         var targetPosition = transform.position + direction;
 
@@ -88,17 +105,24 @@ public class CubeController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), TurnSpeed);
         }
 
-        Rigidbody.velocity = Vector3.SmoothDamp(Rigidbody.velocity, direction, ref Velocity, SmoothTime);//, MaxSpeed);
+        if (IsDashing) {
+            switch (Player) {
+                case PlayerType.Fox:
+                    direction += transform.forward * DashForce;
+                    break;
+                case PlayerType.Penguin:
+                    direction += transform.forward * DashForce;
+                    break;
+            }
+        }
+
+        Rigidbody.velocity = Vector3.SmoothDamp(Rigidbody.velocity, direction, ref Velocity, SmoothTime);
 
         Animator.SetBool("isMoving", Rigidbody.velocity.magnitude > 0.01f);
-
-        InteractUpdate();
-
-        DashUpdate();
     }
 
     private void InteractUpdate() {
-        if (Input.GetButtonDown("Interact" + Player)) {
+        if (Input.GetButtonDown("Interact" + PlayerKey)) {
             Physics.OverlapSphere(transform.position, InteractRadius)
                 .SelectMany(collider => collider.gameObject.GetComponents<IInteractable>())
                 .ForAll(interactable => interactable.Interact(gameObject));
@@ -106,7 +130,7 @@ public class CubeController : MonoBehaviour
     }
 
     private void DashUpdate() {
-        var dashing = Input.GetAxis("Dash" + Player);
+        var dashing = Input.GetAxis("Dash" + PlayerKey);
         if (dashing < 0.5) {
             DashReady = true;
         }
@@ -115,15 +139,10 @@ public class CubeController : MonoBehaviour
             DashTimer -= Time.deltaTime;
         } else {
             if (DashReady && dashing > 0.5) {
-                Dash();
+                DashReady = false;
+                DashTimer = DashDuration;
+                FindObjectOfType<AudioManager>().PlayOneShotSound(DashSound, transform.position);
             }
         }
-    }
-
-    private void Dash() {
-        DashReady = false;
-        Rigidbody.AddForce(transform.forward * DashForce);
-        DashTimer = DashDuration;
-        FindObjectOfType<AudioManager>().PlayOneShotSound(DashSound, transform.position);
     }
 }
