@@ -76,9 +76,9 @@ public class CubeController : MonoBehaviour, IActor {
         get {
             switch (Player) {
                 case PlayerType.Fox:
-                    return "A";
-                case PlayerType.Penguin:
                     return "B";
+                case PlayerType.Penguin:
+                    return "A";
             }
             throw new System.Exception("Unknown PlayerType" + Player);
         }
@@ -123,7 +123,10 @@ public class CubeController : MonoBehaviour, IActor {
     private void InteractUpdate() {
         if (Input.GetButtonDown("Interact" + PlayerKey)) {
             Physics.OverlapSphere(transform.position, InteractRadius)
-                .SelectMany(collider => collider.gameObject.GetComponents<IInteractable>())
+                .Select(collider => collider.gameObject)
+                .OrderBy(obj => Vector3.Distance(transform.position, obj.transform.position))
+                .SelectMany(obj => obj.GetComponents<IInteractable>())
+                .Take(1)
                 .ForAll(interactable => interactable.Interact(gameObject));
         }
     }

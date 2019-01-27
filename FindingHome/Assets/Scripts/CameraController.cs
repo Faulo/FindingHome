@@ -29,20 +29,20 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(GameObject.Find("RoomPosition") == null)
-        {
+        if (GameObject.Find("RoomPosition") == null) {
             blend = false;
-        } else
-        {
+        } else {
             if (transform.parent.name == "Player.Fox") {
                 isFoxCam = true;
             } else
                 isFoxCam = false;
             Room = GameObject.Find("RoomPosition").transform;
-            if(isFoxCam) SnapPoint = new Vector3(Room.position.x - 3, 5, 0);
-            else
+
+            if (isFoxCam) {
                 SnapPoint = new Vector3(Room.position.x + 3, 5, 0);
-            
+            } else { 
+                SnapPoint = new Vector3(Room.position.x - 3, 5, 0);
+            }
         }
 
         
