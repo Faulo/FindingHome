@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7850830574991868668}
   m_Layer: 0
   m_Name: Pinguin
-  m_TagString: Fox
+  m_TagString: Pingu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: B
-  MaxSpeed: 2
+  MaxSpeed: 1
   SmoothTime: 0.01
   TurnSpeed: 0.1
   DashForce: 3000
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 8550979430780081290}
   m_Layer: 0
   m_Name: Player.Pinguin
-  m_TagString: Fox
+  m_TagString: Pingu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,6 +158,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
@@ -273,6 +308,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7714072321703137224}
     m_Modifications:
+    - target: {fileID: 100006, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
+      propertyPath: m_Name
+      value: pinguin8_textured
+      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -328,10 +367,6 @@ PrefabInstance:
     - target: {fileID: 400006, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
       propertyPath: m_LocalScale.z
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
-      propertyPath: m_Name
-      value: pinguin8_textured
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: edb85405cb18e8a4cb8bfc77ebddb803, type: 3}
       propertyPath: m_Controller
