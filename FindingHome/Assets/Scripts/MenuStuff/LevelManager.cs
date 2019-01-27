@@ -30,6 +30,15 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
+    void Update() {
+        if (Input.GetButtonDown("Cancel")) {
+            Application.Quit();
+        }
+        if (Input.GetButtonDown("Submit")) {
+            LoadNextLevel();
+        }
+    }
+
 	public void LoadLevel(string name){
 		Debug.Log ("Level load requested for: " + name);
         SceneManager.LoadScene(name);
