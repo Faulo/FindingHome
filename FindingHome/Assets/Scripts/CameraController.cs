@@ -24,27 +24,33 @@ public class CameraController : MonoBehaviour
 
     Mode mode = Mode.follow;
     [SerializeField]
-    Vector3 SnapPoint;
+    Vector3 SnapPoint = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
     {
-        Room = GameObject.Find("RoomPosition").transform;
-        if (Room == null) blend = false;
+        if(GameObject.Find("RoomPosition") == null)
+        {
+            blend = false;
+        } else
+        {
+            Room = GameObject.Find("RoomPosition").transform;
+            SnapPoint = new Vector3(Room.position.x + 3, 5, 0);
+        }
 
         if (transform.parent.name == "Player.Fox") isFoxCam = true;
         else isFoxCam = false;
 
         Offset = transform.localPosition;
 
-        SnapPoint = new Vector3(Room.position.x + 3, 5, 0);
+        
         if (isFoxCam) SnapPoint.x *= -1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(IsInSnapZone() && blend)
+        if(blend && IsInSnapZone())
         {
             mode = Mode.blend;
         } else
