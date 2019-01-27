@@ -123,12 +123,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7867f85c0717f64e83f0b1ff2dc857b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: A
-  MaxSpeed: 1
+  Player: 0
+  MaxSpeed: 1.5
   SmoothTime: 0.01
   TurnSpeed: 0.1
-  DashForce: 3000
-  DashDuration: 0.25
+  DashForce: 5
+  DashDuration: 0.1
   DashSound: {fileID: 11400000, guid: dc18dc5372afbe148a64b7b1ee63d513, type: 2}
   InteractRadius: 0.5
 --- !u!54 &7965010791456251675
@@ -514,11 +514,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3385462791973185777}
     m_Modifications:
-    - target: {fileID: 6185578439522561971, guid: c725e3b55b453a64193e0bcf3a742584,
-        type: 3}
-      propertyPath: m_Name
-      value: Camera
-      objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561983, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -573,6 +568,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185578439522561971, guid: c725e3b55b453a64193e0bcf3a742584,
+        type: 3}
+      propertyPath: m_Name
+      value: Camera
       objectReference: {fileID: 0}
     - target: {fileID: 6185578439522561969, guid: c725e3b55b453a64193e0bcf3a742584,
         type: 3}
