@@ -96,5 +96,9 @@ public class WinScene : MonoBehaviour
 
         _animator.enabled = true;
         _animator.SetBool("startWinScene", true);
+
+        yield return new WaitForSeconds(20);
+
+        FindObjectOfType<LevelManager>().LoadNextLevel();
     }
 }
