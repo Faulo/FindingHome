@@ -34,17 +34,20 @@ public class CameraController : MonoBehaviour
             blend = false;
         } else
         {
+            if (transform.parent.name == "Player.Fox") isFoxCam = true;
+            else isFoxCam = false;
             Room = GameObject.Find("RoomPosition").transform;
             SnapPoint = new Vector3(Room.position.x + 3, 5, 0);
+
+            if (isFoxCam) SnapPoint.x *= -1;
         }
 
-        if (transform.parent.name == "Player.Fox") isFoxCam = true;
-        else isFoxCam = false;
+        
 
         Offset = transform.localPosition;
 
         
-        if (isFoxCam) SnapPoint.x *= -1;
+        
     }
 
     // Update is called once per frame
