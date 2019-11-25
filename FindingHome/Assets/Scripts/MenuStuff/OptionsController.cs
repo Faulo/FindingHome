@@ -22,7 +22,7 @@ public class OptionsController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		_audioManager.Mixer.SetFloat ("MasterVol", volumeSlider.value);
+		_audioManager.Mixer.SetFloat("MasterVol", volumeSlider.value);
         _audioManager.Mixer.SetFloat("EnvironmentVol", environmentalSlider.value);
         _audioManager.Mixer.SetFloat("PlayerVol", playerSlider.value);
 
@@ -31,7 +31,7 @@ public class OptionsController : MonoBehaviour {
 	public void SaveAndExit () {
         //PlayerPrefsManager.SetMasterVolume (volumeSlider.value);
         //PlayerPrefsManager.SetDifficulty (diffSlider.value);
-        _levelManager.LoadLevel ("01a Start");
+        _levelManager.LoadLevel ("0x01 Start");
 
 	}
 

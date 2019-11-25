@@ -34,7 +34,11 @@ public class AudioManager : MonoBehaviour
     private Dictionary<ulong, AudioPoolItem> _activePool = new Dictionary<ulong, AudioPoolItem>();
 
     private ulong _idGiver = 0;
-    private Transform _listenerPos;
+    private Transform _listenerPos {
+        get {
+            return FindObjectOfType<AudioListener>().transform;
+        }
+    }
     private bool _audiopos = false;
 
     // Exposed Fields
@@ -102,9 +106,8 @@ public class AudioManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        _listenerPos = FindObjectOfType<AudioListener>().transform;
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+
     }
 
     public float GetTrackVolume(string track)
