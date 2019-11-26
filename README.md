@@ -2,7 +2,7 @@
 A game about cooperative dungeon-crawling.
 
 ## Jam Details
-Franken Game Jam 2018
+Global Game Jam 2019
 - Date: 25.01.2019 - 27.01.2019 
 - Site: Universität Bayreuth 
 - Theme: "What home means to you" 
